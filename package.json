@@ -1,10 +1,30 @@
 {
-  "name": "vax-my-age-bot",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "vax-my-age-again",
+  "version": "0.1.0",
+  "bin": {
+    "cdk": "bin/cdk.js"
+  },
+  "author": "Marton Veto",
   "license": "MIT",
+  "main": "functions/index.js",
+  "scripts": {
+    "build": "esbuild functions/index.js --bundle --platform=node --target=node14 --outfile=build/out.js",
+    "cdk": "cdk",
+    "deploy": "cdk deploy",
+    "test": "jest"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "node-telegram-bot-api": "^0.53.0"
+  },
+  "devDependencies": {
+    "@aws-cdk/aws-events": "^1.105.0",
+    "@aws-cdk/aws-events-targets": "^1.105.0",
+    "@aws-cdk/aws-lambda": "^1.105.0",
+    "@aws-cdk/core": "^1.105.0",
+    "aws-cdk": "^1.105.0",
+    "dotenv": "^10.0.0",
+    "esbuild": "^0.12.1",
+    "jest": "^26.4.2"
   }
 }
