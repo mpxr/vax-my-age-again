@@ -10,7 +10,7 @@ const nhsURL =
 const bot = new TelegramBot(token, { polling: true });
 
 async function sendMessage(message, options = {}) {
-  bot.sendMessage(chatId, message, options);
+  await bot.sendMessage(chatId, message, options);
 }
 
 async function main() {
