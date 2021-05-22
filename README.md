@@ -1,4 +1,4 @@
-# 💉 vax-my-again-again
+# 💉 vax-my-age-again
 
 Get notified if you're eligible for a vaccine in the UK. This is a simple Lambda function that fetches and parses the NHS website once an hour (CloudWatch Events) and sends you a Telegram message if you become eligible by age (the age can be configured in the `.env` file).
 
